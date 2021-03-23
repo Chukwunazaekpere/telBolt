@@ -1,0 +1,12 @@
+
+.bonus__Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bonus_btns {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}

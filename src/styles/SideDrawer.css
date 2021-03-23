@@ -1,0 +1,25 @@
+
+
+.sidebar__container { 
+    display: flex;
+    width: 27%;
+    height: 85vh;
+    font-family: 'Lucida alligraphy', 'Times New Roman', Times, serif;
+    background-color: rebeccapurple;
+    flex-direction: column;
+}
+
+.drawer__links {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    margin: 1.5rem;
+}
+.drawer__links > span {
+    display: flex;
+    align-items: center;
+    padding-left: 7px;
+}
