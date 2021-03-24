@@ -7,7 +7,7 @@ interface AppContextProps {
 }
 
 const AppStateContext: FC<AppContextProps> = ({ children }) => {
-    const initialState = {
+    const initialState: AppStateType = {
         showDrawer: true,
     }
     const [state, dispatch] = useReducer(toggleDrawerReducer, initialState);

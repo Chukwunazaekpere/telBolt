@@ -1,13 +1,11 @@
-import * as actionTypes from './actions/ActionTypes';
-import { AppActionSchema } from './actions/Actions';
+import AppActionTypes, {DrawerActionInterface} from './actions/ActionTypes';
 import { AppStateType } from './Store';
 
 
-export const toggleDrawerReducer = (state: AppStateType, action: AppActionSchema): AppStateType => {
+export const toggleDrawerReducer = (state: AppStateType, action: DrawerActionInterface): AppStateType => {
     switch (action.type) {
-        case actionTypes.TOGGLE_DRAWER:
-            const appDrawerStatus = action.payload;
-            state.showDrawer = !appDrawerStatus;
+        case AppActionTypes.Toggle_Drawer:
+            state.showDrawer = action.payload;
             return({
                 ...state,
             })

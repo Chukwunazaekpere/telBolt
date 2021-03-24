@@ -10,14 +10,14 @@
     flex-direction: column;
 }
 
-.signup__text {
+.home__text {
     font-size: 1.3rem;
     font-weight: 550;
     margin-bottom: 10px;
     color: #f4f4f4;
 }
 
-.input__fields {
+.home__input__fields {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,11 +30,10 @@
     padding: 3px;
     border-color: #000;
     border-width: 2px;
-
+    outline: none;
 }
 
 .input__fields:focus-visible {
-    border-color: blueviolet;
     border-radius: 10px;
     color: blue;
 }

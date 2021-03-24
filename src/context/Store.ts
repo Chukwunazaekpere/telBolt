@@ -9,8 +9,8 @@ interface ContextType {
     dispatch: Function,
 }
 
-const AppStore = createContext({} as ContextType);
-export default AppStore;
+const AppStoreContext = createContext({} as ContextType);
+export default AppStoreContext;
 
 
 export type AppStateType = typeof appState;

@@ -1,16 +1,10 @@
-import * as actionTypes from './ActionTypes';
+import AppActionTypes from './ActionTypes';
 
 
 export const toggleDrawer = (status: boolean) => {
     return({
-        type: actionTypes.TOGGLE_DRAWER,
+        type: AppActionTypes.Toggle_Drawer,
         payload: status
     })
 }
 
-interface ActionSchema {
-    type: string,
-    payload: boolean | object
-}
-
-export type AppActionSchema = ActionSchema;

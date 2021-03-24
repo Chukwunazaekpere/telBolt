@@ -21,19 +21,7 @@ const App: FC<Props> = (props) => {
 
   return (
     <div>
-      {/* { */}
 
-      <Navbar />
-      <Switch>
-        <Route exact path='/' component={HomeScreen} />
-        <Route path='/dashboard' component={DashboardScreen} />
-        <Route path='/history' component={HistoryScreen} />
-        <Route path='/notification' component={NotificationScreen} />
-        <Route path='/settings' component={SettingsScreen} />
-        <Route path='/clients' component={ClientScreen} />
-        <Route path='/bonus' component={BonusScreen} />
-      </Switch>
-      {/* } */}
     </div>
   );
 }
