@@ -22,7 +22,9 @@ const HomeScreen: FC<Props> = (props) => {
                 <h3>Trading Bot</h3>
             </section>
             <section className='animate__animated animate__swing home__content'>
-                <span></span>
+                <span className='content__display'>
+                    
+                </span>
                 <ul className='home__btn__group'>
                     <li>
                         <Button color='#171717' onCLick={() => signup()} title='Register' />

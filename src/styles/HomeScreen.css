@@ -29,17 +29,19 @@
     box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.85), 0 10px 17px 0 rgba(0, 0, 0, 0.75); 
 }
 
-.fields__container {
+.content__display {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    background-color: #171717;
     align-items: center;
-    margin: 10px;
-    width: 80%;
-    /* height: 75%; */
+    width: 97%;
+    height: 73vh;
+    box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.85), 0 10px 17px 0 rgba(0, 0, 0, 0.75); 
     border-radius: 10px;
+    margin-bottom: 13px;
 }
 
-.homebtn_group {
+.home__btn__group {
     display: flex;
     width: 90%;
     justify-content: space-between;

@@ -12,13 +12,22 @@ const Button: FC<Props> = (props) => {
     
     return(
         <div style={{
+            display: 'flex',
             color: props.color || 'rebeccapurple',
             backgroundColor: props.backgroundColor || 'coral',
-            width: '3rem',
-            height: '2rem'
+            borderRadius: '10px',
+            padding: '15px',
             
         }}>
-            <button onClick={() => props.onCLick()}>
+            <button style={{
+                display: 'flex',
+                color: props.color || 'rebeccapurple',
+                backgroundColor: props.backgroundColor || 'coral',
+                borderRadius: '10px',
+                padding: '15px',
+                cursor: 'pointer',
+                outline: 'none'
+            }} onClick={() => props.onCLick()}>
                 {props.title}
             </button>
         </div>
