@@ -3,13 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import HomeScreen from './screens/HomeScreen';
 import AppStateContext from './context/AppContext';
 
-//========================== Screens =================================
-import DashboardScreen from './screens/DashboardScreen';
-import HistoryScreen from './screens/HistoryScreen';
-import NotificationScreen from './screens/NotificationScreen';
-import SettingsScreen from './screens/SettingsScreen';
-import ClientScreen from './screens/ClientScreen';
-import BonusScreen from './screens/BonusScreen';
+
 import { FC, ReactNode } from 'react';
 //=====================================================================
 
