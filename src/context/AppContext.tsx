@@ -10,15 +10,12 @@ const AppStateContext: FC<AppContextProps> = ({ children }) => {
     const initialState = {
         showDrawer: true,
     }
-    const [showDrawer, dispatch] = useReducer(toggleDrawerReducer, initialState);
+    const [state, dispatch] = useReducer(toggleDrawerReducer, initialState);
     
     return(
-        // <AppStore.Provider value={{showDrawer, dispatch}}>
-        //     {children}
-        // </AppStore.Provider>
-        <div>
-            <h3>Hello</h3>
-        </div>
+        <AppStore.Provider value={{state, dispatch}}>
+            {children}
+        </AppStore.Provider>
     )
 }
 

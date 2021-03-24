@@ -1,11 +1,15 @@
 import { createContext } from 'react';
 
-// export type GlobalState = typeof globalState;
 const appState = {
     showDrawer: true,
 }
 
-const AppStore = createContext(appState);
+interface ContextType {
+    state: typeof appState,
+    dispatch: Function,
+}
+
+const AppStore = createContext({} as ContextType);
 export default AppStore;
 
 

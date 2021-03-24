@@ -1,0 +1,137 @@
+.signup__container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  flex-direction: column;
+  /* box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.75), 0 15px 20px 0 rgba(0, 0, 0, 0.85); */
+}
+
+.signup__text {
+  font-size: 1.3rem;
+  font-weight: 550;
+  margin-bottom: 10px;
+  color: #f4f4f4;
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid dodgerblue;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.75);
+}
+
+.signup__input__fields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5.2vh;
+  padding-left: 7px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-width: 0;
+  outline: none;
+  background-color: #eee;
+}
+
+.signup__input__fields:focus {
+  color: blue;
+}
+
+.signup__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 40vh;
+  border-radius: 15px;
+  flex-direction: column;
+  background-color: dodgerblue;
+  list-style: none;
+  box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.85), 0 10px 17px 0 rgba(0, 0, 0, 0.75);
+}
+
+.signup__fields__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 7px;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #eee;
+}
+
+.signup__fields__container > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup__btn__group {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  margin: 3px;
+  margin-bottom: 5px;
+}
+
+.signup__input__field {
+  display: flex;
+  width: 100%;
+}
+
+.signup__input__icon {
+  display: flex;
+  border-right: 2px #171717 solid;
+  height: 2.4rem;
+  justify-content: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-color: dodgerblue;
+}
+
+@media (max-width: 500px) {
+  .signup__container {
+    display: flex;
+    width: 100%;
+  }
+  .signup__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+  .signup__input__icon {
+    display: flex;
+    height: 2.4rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 20%;
+    /* background-color: rgb(233, 113, 92); */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-color: dodgerblue;
+    border-bottom-color: dodgerblue;
+  }
+
+  .signup__fields__container > .signup__input__icon {
+    width: 10%;
+  }
+}
+
+@media (max-width: 800px) {
+  .signup__container {
+    display: flex;
+    width: 100%;
+  }
+  .signup__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+}
