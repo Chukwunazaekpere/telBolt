@@ -19,9 +19,9 @@ const HomeScreen: FC<Props> = (props) => {
     return(
         <div className='home__container'>
             <section className='signup__text'>
-                <h3>Admin Signup</h3>
+                <h3>Trading Bot</h3>
             </section>
-            <section className='animate__animated animate__swing signup__form'>
+            <section className='animate__animated animate__swing home__content'>
                 <span></span>
                 <ul className='home__btn__group'>
                     <li>

@@ -3,7 +3,7 @@
 .home__container {
     display: flex;
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.75);
@@ -17,36 +17,13 @@
     color: #f4f4f4;
 }
 
-.home__input__fields {
+.home__content {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 4vh;
-    margin: 1px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 3px;
-    border-color: #000;
-    border-width: 2px;
-    outline: none;
-}
-
-.input__fields:focus-visible {
-    border-radius: 10px;
-    color: blue;
-}
-
-.signup__form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    height: 40vh;
+    width: 95%;
+    height: 87vh;
     border-radius: 15px;
     flex-direction: column;
-    /* margin-top: 1.2rem; */
     background-color: dodgerblue;
     list-style: none;
     box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.85), 0 10px 17px 0 rgba(0, 0, 0, 0.75); 

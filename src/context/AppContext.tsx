@@ -9,6 +9,7 @@ interface AppContextProps {
 const AppStateContext: FC<AppContextProps> = ({ children }) => {
     const initialState: AppStateType = {
         showDrawer: true,
+        currentRoute: "/"
     }
     const [state, dispatch] = useReducer(toggleDrawerReducer, initialState);
     

@@ -1,28 +1,28 @@
 import Navbar from './components/Navbar';
 import { Route, Switch } from "react-router-dom";
-import HomeScreen from './screens/HomeScreen';
-import AppStateContext from './context/AppContext';
+import AppStoreContext from './context/Store';
 
 
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, useContext } from 'react';
 //=====================================================================
-
+import ProtectedRoutes from './routes/ProtectedRoutes';
+import UnprotectedRoutes from './routes/UnprotectedRoutes';
 
 interface Props {
-  props?: {
-    history: object
-  }
+
 }
 
 const App: FC<Props> = (props) => {
-  const route = props.props;
-  console.log(route);
-  
+  const { state } = useContext(AppStoreContext);
+  const currentRoute = state.currentRoute;
 
   return (
-    <div>
-
-    </div>
+      <div>
+        {
+          currentRoute === "/" ? <UnprotectedRoutes />
+          : <ProtectedRoutes />
+        }
+      </div>
   );
 }
 

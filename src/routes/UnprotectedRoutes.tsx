@@ -12,11 +12,11 @@ interface Props {
 const UnprotectedRoutes = (props: Props) => {
 
     return(
-        <div>
+        <Switch>
             <Route exact path='/' component={HomeScreen} />
             <Route path='/register' component={SignupScreen} />
             <Route path='/login' component={LoginScreen} />
-        </div>
+        </Switch>
     )
 }
 
