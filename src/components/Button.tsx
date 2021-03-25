@@ -26,7 +26,11 @@ const Button: FC<Props> = (props) => {
                 borderRadius: '10px',
                 padding: '15px',
                 cursor: 'pointer',
-                outline: 'none'
+                outline: 'none',
+                fontWeight: "bold",
+                fontSize: '15px',
+                fontFamily: "Georgia, 'Times New Roman', Times, serif"
+
             }} onClick={() => props.onCLick()}>
                 {props.title}
             </button>
