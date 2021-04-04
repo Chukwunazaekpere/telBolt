@@ -34,5 +34,4 @@ const ProtectedRoutes: FC<Props> = ({currentPath}) => {
     )
 }
 
-
 export default ProtectedRoutes;
