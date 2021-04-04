@@ -10,7 +10,7 @@ interface Props {
 }
 
 const Button: FC<Props> = (props) => {
-    console.log("Btn Props: ", props.color);
+    // console.log("Btn Props: ", props.color);
     
     return(
         <div style={{

@@ -1,5 +1,3 @@
-
-
 enum AppActionTypes {
     Toggle_Drawer = "TOGGLE_DRAWER",
 }

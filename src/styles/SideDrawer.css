@@ -23,3 +23,24 @@
     align-items: center;
     padding-left: 7px;
 }
+
+
+@media(max-width: 400px) {
+    .sidebar__container { 
+        display: flex;
+        width: 47%;
+        /* height: 85vh;
+        font-family: 'Lucida alligraphy', 'Times New Roman', Times, serif;
+        background-color: rebeccapurple;
+        flex-direction: column; */
+    }
+    .drawer__links {
+        display: flex;
+        list-style: none;
+        font-size: 13px;
+        font-weight: 500;
+        color: #000;
+        text-decoration: none;
+        margin: 1.5rem;
+    }
+}

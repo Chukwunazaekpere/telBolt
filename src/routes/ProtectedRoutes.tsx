@@ -1,4 +1,4 @@
-//========================== Screens =================================
+//========================== Screens ===================================
 import DashboardScreen from '../screens/DashboardScreen';
 import HistoryScreen from '../screens/HistoryScreen';
 import NotificationScreen from '../screens/NotificationScreen';
@@ -7,19 +7,21 @@ import ClientScreen from '../screens/ClientScreen';
 import BonusScreen from '../screens/BonusScreen';
 //=======================================================================
 import Navbar from '../components/Navbar';
+import AppContextProvider from '../context/AppContextProvider';
+
 
 import { Switch, Route } from 'react-router-dom';
+import { FC } from 'react';
+
 
 interface Props {
-    
+    currentPath?: string
 }
 
-
-const ProtectedRoutes = (props: Props) => {
-
+const ProtectedRoutes: FC<Props> = ({currentPath}) => {
     return(
-        <div>
-            <Navbar />
+        <AppContextProvider>
+            <Navbar currentPath={currentPath} />
             <Switch>
                 <Route path='/dashboard' component={DashboardScreen} />
                 <Route path='/history' component={HistoryScreen} />
@@ -28,8 +30,7 @@ const ProtectedRoutes = (props: Props) => {
                 <Route path='/settings' component={SettingsScreen} />
                 <Route path='/bonus' component={BonusScreen} />
             </Switch>
-        </div>
-
+        </AppContextProvider>
     )
 }
 

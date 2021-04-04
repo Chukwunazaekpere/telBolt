@@ -1,13 +1,17 @@
-import React, { useState, useContext, FC } from "react";
+import React, { useState, useContext, FC, ReactNode } from "react";
 import "../styles/Navbar.css";
 import { toggleDrawer } from "../context/actions/Actions";
 import AppStoreContext from '../context/Store';
+import { RouteProps } from 'react-router-dom';
 
-interface NavProps {
-
+interface Props {
+    currentPath?: string
 }
 
-const Navbar: FC<NavProps> = (props) => {
+const Navbar: FC<Props> = ({currentPath}) => {
+    console.log("Route in Nav: ", currentPath);
+    
+    const pathname = currentPath;
     const { dispatch } = useContext(AppStoreContext);
     const [drawerStatus, setDrawerStatus] = useState(true)
 
@@ -19,12 +23,13 @@ const Navbar: FC<NavProps> = (props) => {
 
     return(
         <nav className='nav__container'>
-            <div onClick={() => toggleSideDrawer()} className='hamburger'>
+            <div onClick={() => toggleSideDrawer()} className={currentPath === "/register" || currentPath === "/login" 
+                                                                        ? 'no__hamburger': 'hamburger'}>
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
-            <h3>Bolt Admin</h3>
+            <h3 className='nav__text'>AmcorTradingBot Admin</h3>
         </nav>
     )
 }

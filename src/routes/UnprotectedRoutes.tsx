@@ -1,4 +1,4 @@
-import HomeScreen from '../screens/HomeScreen';
+// import HomeScreen from '../screens/HomeScreen';
 import SignupScreen from '../screens/SignupScreen';
 import LoginScreen from '../screens/LoginScreen';
 
@@ -13,7 +13,7 @@ const UnprotectedRoutes = (props: Props) => {
 
     return(
         <Switch>
-            <Route exact path='/' component={HomeScreen} />
+            {/* <Route exact path='/' component={HomeScreen} /> */}
             <Route path='/register' component={SignupScreen} />
             <Route path='/login' component={LoginScreen} />
         </Switch>

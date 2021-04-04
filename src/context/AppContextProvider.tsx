@@ -6,7 +6,7 @@ interface AppContextProps {
     children: ReactNode
 }
 
-const AppStateContext: FC<AppContextProps> = ({ children }) => {
+const AppContextProvider: FC<AppContextProps> = ({ children }) => {
     const initialState: AppStateType = {
         showDrawer: true,
         currentRoute: "/"
@@ -20,6 +20,6 @@ const AppStateContext: FC<AppContextProps> = ({ children }) => {
     )
 }
 
-export default AppStateContext;
+export default AppContextProvider;
 
  

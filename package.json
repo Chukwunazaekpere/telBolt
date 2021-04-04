@@ -1,5 +1,6 @@
 {
   "name": "telegram_bot",
+  "author": "Chukwunazaekpere Obioma",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,8 +25,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf build && react-scripts build",
     "test": "react-scripts test",
+    "commit": "git add . && git commit -am milestone && git push origin master",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

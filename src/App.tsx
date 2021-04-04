@@ -1,34 +1,26 @@
-import Navbar from './components/Navbar';
-import { Route, Switch } from "react-router-dom";
-import AppStoreContext from './context/Store';
+import {RouteProps, Route, Switch, withRouter } from "react-router-dom";
 
-
-import { FC, ReactNode, useContext } from 'react';
 //=====================================================================
 import ProtectedRoutes from './routes/ProtectedRoutes';
 import UnprotectedRoutes from './routes/UnprotectedRoutes';
 
 interface Props {
-
+  location?: RouteProps["location"]
+  props?: RouteProps['children']
 }
 
-const App: FC<Props> = (props) => {
-  const { state } = useContext(AppStoreContext);
-  const currentRoute = state.currentRoute;
-
+const App = (props: Props) => {
+  const currentLocation = props.location?.pathname;  
   return (
-      <div>
+      <>
         {
-          // currentRoute === "/" ? <UnprotectedRoutes />
-          // : <ProtectedRoutes />
           <div>
-            <ProtectedRoutes />
+            <ProtectedRoutes currentPath={currentLocation} />
             <UnprotectedRoutes />
           </div>
-
         }
-      </div>
+      </>
   );
 }
 
-export default App;
+export default withRouter(App);
