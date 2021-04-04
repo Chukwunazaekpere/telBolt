@@ -1,16 +1,20 @@
 import React, { useState, useContext, FC } from "react";
 import "../styles/Navbar.css";
 import { toggleDrawer } from "../context/actions/Actions";
+import AppStoreContext from '../context/Store';
 
 interface NavProps {
 
 }
 
 const Navbar: FC<NavProps> = (props) => {
-    
+    const { dispatch } = useContext(AppStoreContext);
+    const [drawerStatus, setDrawerStatus] = useState(true)
+
     const toggleSideDrawer = () => {
         console.log("Clicked hamburger...");
-        toggleDrawer(false);
+        dispatch(toggleDrawer(drawerStatus));
+        setDrawerStatus(!drawerStatus)
     };
 
     return(

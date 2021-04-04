@@ -1,6 +1,9 @@
 import "../styles/SideDrawer.css";
 import { NavLink } from "react-router-dom";
 import * as faIcons from "react-icons/fa";
+import { useContext, useState } from "react";
+import AppStoreContext from "../context/Store";
+import { toggleDrawer } from "../context/actions/Actions";
 
 interface Props {
     
@@ -8,6 +11,14 @@ interface Props {
 
 
 const SideDrawer = (props: Props) => {
+    const { state, dispatch } = useContext(AppStoreContext);
+    const [drawerStatus, setDrawerStatus] = useState(false)
+
+    const toggleSideDrawer = () => {
+        dispatch(toggleDrawer(drawerStatus));
+        setDrawerStatus(!drawerStatus)
+    };
+    
     const menu = ['Dashboard', 'Client', 'History', 'Bonus', 
                         "Notification", "Settings", "Signout"]
                         
@@ -18,7 +29,7 @@ const SideDrawer = (props: Props) => {
             {
                 menu.map((item, idx) => (
                     <ul key={idx}>
-                        <NavLink to={item.toLowerCase()} className='drawer__links'>
+                        <NavLink onClick={() => toggleSideDrawer()} to={item.toLowerCase()} className='drawer__links'>
                             <span>{icons[idx]}</span>
                             <span>{item}</span>
                         </NavLink>

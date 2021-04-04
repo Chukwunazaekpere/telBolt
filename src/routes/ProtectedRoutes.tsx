@@ -18,16 +18,18 @@ interface Props {
 const ProtectedRoutes = (props: Props) => {
 
     return(
-
-        <Switch>
+        <div>
             <Navbar />
-            <Route path='/dashboard' component={DashboardScreen} />
-            <Route path='/history' component={HistoryScreen} />
-            <Route path='/notification' component={NotificationScreen} />
-            <Route path='/client' component={ClientScreen} />
-            <Route path='/settings' component={SettingsScreen} />
-            <Route path='/bonus' component={BonusScreen} />
-        </Switch>
+            <Switch>
+                <Route path='/dashboard' component={DashboardScreen} />
+                <Route path='/history' component={HistoryScreen} />
+                <Route path='/notification' component={NotificationScreen} />
+                <Route path='/client' component={ClientScreen} />
+                <Route path='/settings' component={SettingsScreen} />
+                <Route path='/bonus' component={BonusScreen} />
+            </Switch>
+        </div>
+
     )
 }
 

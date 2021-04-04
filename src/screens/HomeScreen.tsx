@@ -8,13 +8,9 @@ interface Props {
     children?: ReactNode
 }
 
-interface ActionLoop {
-    action: string,
-    idx: number
-}
 
 const HomeScreen: FC<Props> = ({ children }) => {
-    const actions = ['Balance', 'Deposit', 'Withdrawal', 'Transactions',
+    const actions = ['Balance', 'Deposit', 'Withdrawal', 'Reinvest', 'Transactions',
                         'Team', 'Support', "FAQ's", ]
 
     const signup = () => {
@@ -35,6 +31,15 @@ const HomeScreen: FC<Props> = ({ children }) => {
                             actions.map((action, idx)  => (
                                 <li key={idx}>
                                     <Button color='#171717' onCLick={() => signup()} title={action} />
+                                </li>
+                            ))   
+                        }
+                </ul>
+                <ul className='home__btn__group__mobile'>
+                        {
+                            actions.map((action, idx) => (
+                                <li key={idx}>
+                                    <Button padding='3px' fontSize='13px' color='#171717' onCLick={() => signup()} title={action} />
                                 </li>
                             ))   
                         }

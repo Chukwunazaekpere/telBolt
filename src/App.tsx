@@ -19,8 +19,13 @@ const App: FC<Props> = (props) => {
   return (
       <div>
         {
-          currentRoute === "/" ? <UnprotectedRoutes />
-          : <ProtectedRoutes />
+          // currentRoute === "/" ? <UnprotectedRoutes />
+          // : <ProtectedRoutes />
+          <div>
+            <ProtectedRoutes />
+            <UnprotectedRoutes />
+          </div>
+
         }
       </div>
   );

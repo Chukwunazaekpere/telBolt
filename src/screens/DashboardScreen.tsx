@@ -1,3 +1,6 @@
+import SideDrawer from "../components/SideDrawer";
+import { useContext } from 'react';
+import AppStoreContext from '../context/Store';
 
 interface Props {
     
@@ -5,11 +8,14 @@ interface Props {
 
 
 const DashboardScreen = (props: Props) => {
-    console.log("Props: ", props);
+    const { state } = useContext(AppStoreContext);
+    const drawerStatus = state.showDrawer;
     
     return(
         <div>
-            <h2>DashboardScreen</h2>
+            {
+                drawerStatus && <SideDrawer />
+            }
         </div>
     )
 }
