@@ -11,7 +11,7 @@ interface Props {
 
 
 const SideDrawer = (props: Props) => {
-    const { state, dispatch } = useContext(AppStoreContext);
+    const { dispatch } = useContext(AppStoreContext);
     const [drawerStatus, setDrawerStatus] = useState(false)
 
     const toggleSideDrawer = () => {

@@ -1,4 +1,4 @@
-import { useReducer, useContext, FC, ReactNode } from 'react';
+import { useReducer, FC, ReactNode } from 'react';
 import AppStore, { AppStateType } from './Store';
 import {toggleDrawerReducer} from './reducer';
 
@@ -8,7 +8,7 @@ interface AppContextProps {
 
 const AppContextProvider: FC<AppContextProps> = ({ children }) => {
     const initialState: AppStateType = {
-        showDrawer: true,
+        showDrawer: false,
         currentRoute: "/"
     }
     const [state, dispatch] = useReducer(toggleDrawerReducer, initialState);

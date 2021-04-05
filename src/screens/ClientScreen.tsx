@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import SideDrawer from "../components/SideDrawer";
 import AppStoreContext from "../context/Store";
+import '../styles/Client.css';
 
 interface Props {
     
@@ -12,7 +13,7 @@ const ClientScreen = (props: Props) => {
     const drawerStatus = state.showDrawer;
     
     return(
-        <div>
+        <div className='client__container'>
             {
                 drawerStatus && <SideDrawer />
             }

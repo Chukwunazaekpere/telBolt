@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import SideDrawer from "../components/SideDrawer";
 import AppStoreContext from "../context/Store";
+import '../styles/Notification.css'
 
 interface Props {
     
@@ -13,7 +14,7 @@ const NotificationScreen = (props: Props) => {
     const drawerStatus = state.showDrawer;
     
     return(
-        <div>
+        <div className='notification__container'>
             {
                 drawerStatus && <SideDrawer />
             }

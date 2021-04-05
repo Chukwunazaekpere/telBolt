@@ -1,4 +1,4 @@
-import {RouteProps, Route, Switch, withRouter } from "react-router-dom";
+import {RouteProps, withRouter } from "react-router-dom";
 
 //=====================================================================
 import ProtectedRoutes from './routes/ProtectedRoutes';
